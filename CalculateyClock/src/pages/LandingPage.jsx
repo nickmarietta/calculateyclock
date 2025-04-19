@@ -5,4 +5,5 @@ export default function LandingPage() {
             <h1>Calculate y Clock</h1>
         </div>
     );
-    }
+}
+
