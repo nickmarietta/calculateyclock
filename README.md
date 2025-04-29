@@ -20,7 +20,6 @@ A simple yet powerful tool to help part-time workers estimate their take-home pa
 
 ## 🚀 Demo
 
-👉 [Live Demo (if deployed)](https://your-demo-link.com)  
 👉 Or run locally by following the steps below
 
 ---
