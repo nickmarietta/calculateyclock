@@ -2,9 +2,9 @@
 
 A simple yet powerful tool to help part-time workers estimate their take-home pay in California based on actual clock-in and clock-out data. This app integrates shift tracking with real-time wage and tax calculations to give users clarity on how much they’ve earned.
 
-![screenshot](./screenshot.png) <!-- Replace with actual screenshot path -->
 
----
+---![image](https://github.com/user-attachments/assets/3da2bef7-61f9-448b-b9f4-9fe7cc03d5d0)
+
 
 ## 📌 Features
 
