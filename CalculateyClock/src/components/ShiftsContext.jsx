@@ -1,20 +1,23 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const ShiftsContext = createContext();
 
-export const useShifts = () => {
-  const context = useContext(ShiftsContext);
-  if (!context) {
-    throw new Error("useShifts must be used within a ShiftsProvider");
-  }
-  return context;
-};
+export function useShifts() {
+  return useContext(ShiftsContext);
+}
 
-export const ShiftsProvider = ({ children }) => {
-  const [shifts, setShifts] = useState([]);
+export function ShiftsProvider({ children }) {
+  const [shifts, setShifts] = useState(() => {
+    const storedShifts = localStorage.getItem("shifts");
+    return storedShifts ? JSON.parse(storedShifts) : [];
+  });
 
-  const addShift = (newShift) => {
-    setShifts((prevShifts) => [...prevShifts, newShift]);
+  useEffect(() => {
+    localStorage.setItem("shifts", JSON.stringify(shifts));
+  }, [shifts]);
+
+  const addShift = (shift) => {
+    setShifts((prev) => [...prev, shift]);
   };
 
   return (
@@ -22,4 +25,4 @@ export const ShiftsProvider = ({ children }) => {
       {children}
     </ShiftsContext.Provider>
   );
-};
+}

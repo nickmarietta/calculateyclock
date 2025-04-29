@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useShifts } from "../components/ShiftsContext.jsx";
+import { Link } from "react-router";
+import dayjs from "dayjs";
 
 const ClockInOut = () => {
   const [clockInTime, setClockInTime] = useState("");
@@ -12,16 +14,12 @@ const ClockInOut = () => {
   const handleAddShift = (e) => {
     e.preventDefault();
 
-    if (!clockInTime || !clockOutTime) {
-      alert("Please enter both clock in and clock out times");
-      return;
-    }
+    const start = dayjs(`${shiftDate}T${clockInTime}`);
+    const end = dayjs(`${shiftDate}T${clockOutTime}`);
 
-    const [inHours, inMinutes] = clockInTime.split(":").map(Number);
-    const [outHours, outMinutes] = clockOutTime.split(":").map(Number);
+    let totalHours = end.diff(start, "minute") / 60;
 
-    let totalHours = outHours - inHours + (outMinutes - inMinutes) / 60;
-
+    // we need hours in any case to do math
     if (totalHours < 0) {
       totalHours += 24;
     }
@@ -39,15 +37,21 @@ const ClockInOut = () => {
     setClockOutTime("");
   };
 
-
-  // htmlFor is just the same as For in regular html but in jsx, it is a reserved word.
+  // htmlFor is just the same as For in regular html but in jsx, it is a reserved word (moves the cursor over automatically once clicked)
   // e.target.value is reference the event's target value (whatever the cursor clicks)
   return (
     <div>
-      <h2>Clock In/Out</h2>
+      <Link to="/">
+        <button className="bold text-2xl border-2 rounded-sm border-solid cursor-pointer">
+          Home
+        </button>
+      </Link>
+      <h1 className="bold text-4xl p-20">Clock In/Out</h1>
       <form onSubmit={handleAddShift}>
         <div>
-          <label htmlFor="shiftDate">Date:</label>
+          <label htmlFor="shiftDate" className="bold text-2xl pr-10">
+            Date:
+          </label>
           <input
             type="date"
             id="shiftDate"
@@ -56,7 +60,9 @@ const ClockInOut = () => {
           />
         </div>
         <div>
-          <label htmlFor="clockIn" className="bold text-2xl">Clock In: </label>
+          <label htmlFor="clockIn" className="bold text-2xl pr-10">
+            What time did you clock in?:{" "}
+          </label>
           <input
             type="time"
             id="clockIn"
@@ -65,8 +71,9 @@ const ClockInOut = () => {
           />
         </div>
         <div>
-          
-          <label htmlFor="clockOut" className="bold text-2xl">Clock Out: </label>
+          <label htmlFor="clockOut" className="bold text-2xl pr-10">
+            What time did you clock out?
+          </label>
           <input
             type="time"
             id="clockOut"
@@ -74,7 +81,12 @@ const ClockInOut = () => {
             onChange={(e) => setClockOutTime(e.target.value)}
           />
         </div>
-        <button type="submit">Add Shift</button>
+        <button
+          type="submit"
+          className="bold text-2xl border-2 rounded-sm border-solid cursor-pointer"
+        >
+          Add Shift
+        </button>
       </form>
     </div>
   );
