@@ -13,7 +13,7 @@ export default function LandingPage() {
             Utilize this tool to track how much money you made at your part time
             job!
           </p>
-          <Link to="/estimator">
+          <Link to="/incomecalc">
             <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-semibold p-4 rounded-lg shadow">
               Go to Paycheck Estimator
             </button>

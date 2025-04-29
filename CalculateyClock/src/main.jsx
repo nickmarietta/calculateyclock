@@ -5,6 +5,7 @@ import { ShiftsProvider } from "./components/ShiftsContext.jsx";
 import LandingPage from "./pages/LandingPage";
 import ClockInOut from "./pages/ClockInOutPage";
 import WorkOverview from "./pages/WorkOverviewPage.jsx";
+import StandaloneCaliforniaCalculator from "./pages/IncomeCalculatorPage.jsx";
 import "./App.css";
 
 createRoot(document.getElementById("root")).render(
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
       <ShiftsProvider>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/incomecalc"element={<StandaloneCaliforniaCalculator/>}/>
           <Route path="/clockinclockout" element={<ClockInOut />} />
           <Route path="/workoverview" element={<WorkOverview />} />
         </Routes>
