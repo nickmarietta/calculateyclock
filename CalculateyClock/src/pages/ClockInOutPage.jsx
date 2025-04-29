@@ -42,14 +42,11 @@ const ClockInOut = () => {
   return (
     <GradientBackground>
       <div className="flex flex-col flex-grow">
-        {/* Navbar */}
         <Navbar />
-        
-        {/* Main content box */}
-        <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto mt-6 flex-grow">
 
+        <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto mt-6 flex-grow">
           <h1 className="bold text-4xl p-4">Clock In/Out</h1>
-          
+
           <form onSubmit={handleAddShift}>
             <div className="mb-4">
               <label htmlFor="shiftDate" className="bold text-2xl pr-10">

@@ -1,3 +1,5 @@
+// change this page so that it makes usage of the react-big-calendar library
+
 import { useShifts } from "../components/ShiftsContext";
 import { Link } from "react-router-dom";
 import Navbar from "../components/NavBar";
@@ -5,17 +7,16 @@ import GradientBackground from "../components/GradientBackground";
 
 export default function WorkOverview() {
   const { shifts } = useShifts();
-  const safeShifts = shifts ?? []; 
+  const safeShifts = shifts ?? [];
 
   return (
     <GradientBackground>
       <div className="flex flex-col flex-grow">
         {/* Navbar */}
         <Navbar />
-        
+
         {/* Main content box */}
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto mt-6 flex-grow">
-
           <h1 className="text-3xl font-bold mb-4">Work Overview</h1>
 
           {safeShifts.length === 0 ? (
