@@ -8,26 +8,30 @@ export default function LandingPage() {
       <Navbar />
       <div className="flex flex-col items-center justify-center h-screen p-4 overflow-y-hidden">
         <GradientBackground>
-          <h1 className="text-4xl font-bold mb-4 text-white-800">About:</h1>
-          <p className="text-lg text-white-600 mb-6 text-center max-w-md">
-            Utilize this tool to track how much money you made at your part time
-            job!
+          <h1 className="text-3xl font-bold mb-2 text-center text-[#ECDFCC]">About:</h1>
+          <p className="text-2xl font-bold mb-6 text-center text-[#ECDFCC]">
+            Ever Wondered How Much You'll Really Be Making For Your Current Pay Week? Try Our Paycheck Calculator Estimator, Made Using California's Most Recent 2024* Income Tax Information. 
           </p>
+          <div className="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
           <Link to="/incomecalc">
-            <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-semibold p-4 rounded-lg shadow">
+            <button className="bg-[#2a2d34] hover:bg-[#988686] cursor-pointer text-[#ECDFCC] font-semibold py-2 px-4 mt-3 rounded-lg shadow">
               Go to Paycheck Estimator
             </button>
           </Link>
           <Link to="/clockinclockout" className="p-4">
-            <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-semibold p-4 rounded-lg shadow">
+            <button className="bg-[#2a2d34] hover:bg-[#988686] cursor-pointer text-[#ECDFCC] font-semibold py-2 px-4 mt-3 rounded-lg shadow">
               Go to Clock In / Out
             </button>
           </Link>
           <Link to="/workoverview">
-            <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-semibold p-4 rounded-lg shadow">
+            <button className="bg-[#2a2d34] hover:bg-[#988686] cursor-pointer text-[#ECDFCC] font-semibold py-2 px-4 mt-3 rounded-lg shadow">
               Go to Work Overview
             </button>
           </Link>
+          </div>
+          <f className="text-1 italic mb-20 pt-60text-center text-[#ECDFCC]">
+              Reminder This Is Just An Estimate, PayDayZ Is Not Liable For Company Issues Between Your Job And Yourself, Get A Lawyer
+          </f>
         </GradientBackground>
       </div>
     </div>
