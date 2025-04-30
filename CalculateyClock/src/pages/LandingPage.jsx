@@ -5,42 +5,49 @@ import FooterBar from "../components/FooterBar";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-20">
         <GradientBackground>
-          <h1 className="text-3xl font-bold p-12 mb-2 text-center text-[#ECDFCC]">About:</h1>
-          <p className="text-2xl font-bold mb-6 text-center text-[#ECDFCC]">
-            Ever Wondered How Much You'll Really Be Making For Your Current Pay Week? Try Our Paycheck Calculator Estimator, Made Using California's Most Recent 2024* Income Tax Information. 
-          </p>
-          <div className="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
-          <Link to="/incomecalc">
-            <button className="bg-[#2a2d34] hover:bg-[#988686] cursor-pointer text-[#ECDFCC] font-semibold py-2 px-4 mt-3 rounded-lg shadow">
-              Go to Paycheck Estimator
-            </button>
-          </Link>
-          <Link to="/clockinclockout" className="p-4">
-            <button className="bg-[#2a2d34] hover:bg-[#988686] cursor-pointer text-[#ECDFCC] font-semibold py-2 px-4 mt-3 rounded-lg shadow">
-              Go to Clock In / Out
-            </button>
-          </Link>
-          <Link to="/workoverview">
-            <button className="bg-[#2a2d34] hover:bg-[#988686] cursor-pointer text-[#ECDFCC] font-semibold py-2 px-4 mt-3 rounded-lg shadow">
-              Go to Work Overview
-            </button>
-          </Link>
-          </div>
-          </GradientBackground>
-          </main>
-          <div>
-          <FooterBar>
-          <div className="flex flex-col items-center justify-center h-screen p-4 overflow-y-hidden">
-            <h1 className="text-1 italic mb-20 pt-60text-center text-[#ECDFCC]">
-              *Reminder This Is Just An Estimate, PayDayZ Is Not Liable For Company Issues Between Your Job And Yourself, Get A Lawyer
-          </h1>
-          </div>
-          </FooterBar>
-      </div>
+          {/* ---------------------------------------------------------------------About Section--------------------------------------------------------------------------------- */}
+          <section className="max-w-4xl mx-auto px-6 text-center">
+            <h1 className="text-4xl font-extrabold mb-4 text-[#ECDFCC] tracking-wide">
+              About
+            </h1>
+            <p className="text-lg md:text-xl font-medium mb-10 text-[#ECDFCC] leading-relaxed">
+              Ever wondered how much you'll really be making this pay week? Try our Paycheck Calculator Estimator — built using California's most recent 2024* income tax info.
+            </p>
+
+            {/* ---------------------------------------------------------------------Buttons--------------------------------------------------------------------------------- */}
+            <div className="flex flex-col md:flex-row md:justify-center gap-6">
+              <Link to="/incomecalc">
+                <button className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1">
+                  Go to Paycheck Estimator
+                </button>
+              </Link>
+
+              <Link to="/clockinclockout">
+                <button className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1">
+                  Go to Clock In / Out
+                </button>
+              </Link>
+
+              <Link to="/workoverview">
+                <button className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1">
+                  Go to Work Overview
+                </button>
+              </Link>
+            </div>
+          </section>
+        </GradientBackground>
+      </main>
+      
+      {/* ---------------------------------------------------------------------Footer--------------------------------------------------------------------------------- */}
+      <FooterBar>
+        <div className="text-center text-[#ECDFCC] text-sm italic py-10 px-4">
+          *Reminder: This is just an estimate. PayDayZ is not liable for issues between your employer and you. Consult a lawyer for legal matters.
+        </div>
+      </FooterBar>
     </div>
   );
 }
