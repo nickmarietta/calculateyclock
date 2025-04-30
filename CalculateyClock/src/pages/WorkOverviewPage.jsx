@@ -12,11 +12,8 @@ export default function WorkOverview() {
   return (
     <div className="flex flex-col min-h-screen">
     <Navbar />
-    <main className="flex-grow">
+    <main className="flex-grow pt-20">
     <GradientBackground>
-        {/* Navbar */}
-
-        {/* Main content box */}
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto mt-6 flex-grow">
           <h1 className="text-3xl font-bold mb-4">Work Overview</h1>
 

@@ -49,7 +49,7 @@ function StandaloneCaliforniaCalculator() {
 
   return (
     <GradientBackground>
-      <div className="flex flex-col flex-grow">
+      <div className="flex flex-col flex-grow pt-20">
         <Navbar />
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto mt-6 flex-grow">
           <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
