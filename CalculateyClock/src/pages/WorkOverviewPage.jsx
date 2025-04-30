@@ -10,10 +10,11 @@ export default function WorkOverview() {
   const safeShifts = shifts ?? [];
 
   return (
+    <div className="flex flex-col min-h-screen">
+    <Navbar />
+    <main className="flex-grow">
     <GradientBackground>
-      <div className="flex flex-col flex-grow">
         {/* Navbar */}
-        <Navbar />
 
         {/* Main content box */}
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto mt-6 flex-grow">
@@ -45,7 +46,8 @@ export default function WorkOverview() {
             </ul>
           )}
         </div>
-      </div>
     </GradientBackground>
+    </main>
+    </div>
   );
 }
