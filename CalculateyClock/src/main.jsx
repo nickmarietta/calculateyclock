@@ -9,6 +9,8 @@ import StandaloneCaliforniaCalculator from "./pages/IncomeCalculatorPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import "./App.css";
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
