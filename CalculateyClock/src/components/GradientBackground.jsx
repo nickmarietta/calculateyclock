@@ -22,11 +22,12 @@ export default function GradientBackground( {children} ) {
   // canvas needs to accept "children" in order to be able to render anything
   // canvas needs to ALSO be wrapped in a div
   return (
-    <div>
-    <canvas id="canvas-basic" className="absolute top-0 left-0 w-full h-full -z-10"></canvas>
-        <div>
-            {children}
-        </div>
+    <div className="relative w-full">
+      <canvas id="canvas-basic" className="fixed top-0 left-0 w-full h-full -z-10"/>
+
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 }
