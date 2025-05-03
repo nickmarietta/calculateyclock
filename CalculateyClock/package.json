@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "dayjs": "^1.11.13",
+    "framer-motion": "^12.9.4",
     "granim": "^2.0.0",
     "react": "^19.0.0",
     "react-big-calendar": "^1.18.0",

@@ -1,3 +1,7 @@
+{/*Edited By :Nickmarietta*/}
+{/*Edited By :Bryant Martinez*/}
+
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ShiftsContext = createContext();
@@ -20,8 +24,32 @@ export function ShiftsProvider({ children }) {
     setShifts((prev) => [...prev, shift]);
   };
 
+  // Added delete functionality
+  const deleteShift = (index) => {
+    setShifts((prev) => {
+      const updated = [...prev];
+      updated.splice(index, 1);
+      return updated;
+    });
+  };
+
+  // Added update functionality
+  const updateShift = (index, updatedShift) => {
+    setShifts((prev) => {
+      const updated = [...prev];
+      updated[index] = updatedShift;
+      return updated;
+    });
+  };
+
   return (
-    <ShiftsContext.Provider value={{ shifts, addShift }}>
+    <ShiftsContext.Provider value={{ 
+      shifts, 
+      setShifts, 
+      addShift, 
+      deleteShift, 
+      updateShift 
+    }}>
       {children}
     </ShiftsContext.Provider>
   );
