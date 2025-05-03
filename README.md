@@ -101,6 +101,8 @@ A simple yet powerful tool to help part-time workers estimate their take-home pa
 
 ## 🚀 Demo
 
+👉 https://youtu.be/AUEYixI1A7Y
+
 👉 Or run locally by following the steps below
 
 ---
