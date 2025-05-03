@@ -1,5 +1,5 @@
-# 💸 California Income Calculator - "PayDayZ" 
-(![PayDayZ Logo](https://github.com/user-attachments/assets/720b6ba5-35a1-424c-bd5f-e198c2f79ee5))
+# 💸 California Income Calculator - "PayDayZ" ![55X55 PAYDAYZ ](https://github.com/user-attachments/assets/2a26a0cd-afae-48eb-9915-460dc6ab4e32)
+
 
 
 A simple yet powerful tool to help part-time workers estimate their take-home pay in California based on actual clock-in and clock-out data. This app integrates shift tracking with real-time wage and tax calculations to give users clarity on how much they’ve earned.
