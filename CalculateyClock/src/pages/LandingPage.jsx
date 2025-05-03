@@ -1,7 +1,11 @@
+{/*Edited By :Bryant Martinez*/}
+{/*Edited By :Nick Marietta*/}
+
 import { Link } from "react-router-dom";
 import Navbar from "../components/NavBar";
 import GradientBackground from "../components/GradientBackground";
 import FooterBar from "../components/FooterBar";
+import TransitionButton from "../components/TransitionButton";
 
 export default function LandingPage() {
   return (
@@ -22,23 +26,16 @@ export default function LandingPage() {
 
             {/* ---------------------------------------------------------------------Buttons--------------------------------------------------------------------------------- */}
             <div className="flex flex-col md:flex-row md:justify-center gap-6">
-              <Link to="/incomecalc">
-                <button className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <TransitionButton to="/incomecalc" className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1 cursor-pointer">
                   Go to Paycheck Estimator
-                </button>
-              </Link>
-
-              <Link to="/clockinclockout">
-                <button className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1 cursor-pointer">
+                </TransitionButton>
+              <TransitionButton to="/clockinclockout" className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1 cursor-pointer">
                   Go to Clock In / Out
-                </button>
-              </Link>
-
-              <Link to="/workoverview">
-                <button className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1 cursor-pointer">
+                </TransitionButton>
+              <TransitionButton to="/workoverview"
+               className="bg-[#181C14] hover:bg-[#697565] text-[#ECDFCC] font-semibold py-3 px-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-1 cursor-pointer">
                   Go to Work Overview
-                </button>
-              </Link>
+                </TransitionButton>
             </div>
           </section>
         </GradientBackground>

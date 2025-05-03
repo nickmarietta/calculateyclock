@@ -1,3 +1,5 @@
+{/*Edited By :Nick Marietta*/}
+
 import RegisterForm from "../components/Register";
 import GradientBackground from "../components/GradientBackground";
 
