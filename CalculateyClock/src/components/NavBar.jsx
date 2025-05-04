@@ -3,7 +3,6 @@
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "/public/logo.png";
 import TransitionButton from "./TransitionButton";
 
 export default function Navbar() {
@@ -15,7 +14,7 @@ export default function Navbar() {
         className="absolute left-0 h-full px-0 flex items-center"
       >
         <motion.img
-          src={logo}
+          src="/Logo.png"
           alt="Logo"
           className="h-full object-contain"
           whileHover={{ scale: 1.05 }}
