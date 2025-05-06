@@ -37,7 +37,6 @@ function Login() {
           className="h-16"
         />
       </div>
-      
       <p className="text-xl font-semibold mb-6">Login</p>
       <form
         className="flex flex-col space-y-4"
