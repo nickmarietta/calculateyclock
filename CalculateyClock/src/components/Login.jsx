@@ -1,5 +1,3 @@
-{/*Edited By :Nickmarietta*/}
-
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -7,7 +5,6 @@ import { useState } from "react";
 function Login() {
   const [loginStatus, setloginStatus] = useState("");
   const navigate = useNavigate();
-
   const {
     register,
     handleSubmit,
@@ -33,8 +30,14 @@ function Login() {
 
   return (
     <div className="p-8 max-w-md mx-auto">
+      <div className="flex justify-center mb-6">
+        <img 
+          src="/PayDayzLogo.png" 
+          alt="Company Logo" 
+          className="h-16"
+        />
+      </div>
       <p className="text-xl font-semibold mb-6">Login</p>
-
       <form
         className="flex flex-col space-y-4"
         onSubmit={handleSubmit(onSubmit)}

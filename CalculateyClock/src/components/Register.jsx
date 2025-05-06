@@ -39,6 +39,14 @@ function RegisterForm() {
 
   return (
     <div className="p-8 max-w-md mx-auto">
+      <div className="flex justify-center mb-6">
+        <img 
+          src="/PayDayzLogo.png" 
+          alt="Company Logo" 
+          className="h-16"
+        />
+      </div>
+
       <p className="text-xl font-semibold mb-6">Register Account</p>
       <form
         onSubmit={handleSubmit}
